@@ -6,23 +6,22 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql, StaticQuery }from "gatsby"
 
-export const query = graphql`
-  {
-    allWordpressPage {
-      edges {
-        node {
-          id
-          title
-          content
-        }
-      }
-    }
-  }
-`
+// console.log({ data });
 
-const IndexPage = ({data}) => {
+// if (data) {
+//   console.log('わろた',data);
+// } else {
+//   console.error('見つからない');
 
-  const {allWordpressPage:{edges}}=data
+// }
+
+const IndexPage = ({ data }) => {
+
+  const { allWordpressPage: { edges } } = data
+
+  
+
+  
 
  return  <Layout>
   <div>
@@ -36,6 +35,20 @@ const IndexPage = ({data}) => {
 </div>
   </Layout>
 }
+
+export const query = graphql`
+  {
+    allWordpressPage {
+      edges {
+        node {
+          id
+          title
+          content
+        }
+      }
+    }
+  }
+`
 
 
 
