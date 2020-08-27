@@ -6,6 +6,20 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql, StaticQuery }from "gatsby"
 
+export const query = graphql`
+  {
+    allWordpressPage {
+      edges {
+        node {
+          id
+          title
+          content
+        }
+      }
+    }
+  }
+`
+
 const IndexPage = ({data}) => {
 
   const {allWordpressPage:{edges}}=data
@@ -24,18 +38,6 @@ const IndexPage = ({data}) => {
 }
 
 
-export const query = graphql`
-  {
-    allWordpressPage {
-      edges {
-        node {
-          id
-          title
-          content
-        }
-      }
-    }
-  }
-`
+
 
 export default IndexPage
