@@ -11,7 +11,7 @@ module.exports = {
       options: {
         // The base url to your WP site.
         minimizeDeprecationNotice: true,
-        baseUrl: 'shincoder.wp.xdomain.jp', // ご自身のWordPressサイトのドメイン
+        baseUrl: 'd6d142baf133.ngrok.io', // ご自身のWordPressサイトのドメイン
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
